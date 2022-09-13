@@ -1,3 +1,7 @@
+# Aplikasi
+Aplikasi dari repo ini memiliki link sebagai berikut
+[Link PBP-Tugas2-Ivan](http://ivanrbnc-pbp-tugas2.herokuapp.com/katalog/)
+
 # Jawaban dari pertanyaan yang telah diberikan
 
 ### 1. Buatlah bagan yang berisi *request client* ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara **urls.py**, **views.py**, **models.py**, dan berkas **html**;
