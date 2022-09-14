@@ -1,5 +1,5 @@
 # Aplikasi
-Aplikasi dari repo ini memiliki link sebagai berikut
+- Aplikasi dari repo ini memiliki link sebagai berikut:
 [Link PBP-Tugas2-Ivan](http://ivanrbnc-pbp-tugas2.herokuapp.com/katalog/)
 
 # Jawaban dari pertanyaan yang telah diberikan
@@ -17,12 +17,12 @@ Aplikasi dari repo ini memiliki link sebagai berikut
 
 ### 2. Jelaskan kenapa menggunakan *virtual environment*? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan *virtual environment*?
 
-*Virtual environment* berguna untuk memisahkan antara pengaturan dan *package* yang dimiliki oleh suatu proyek Django dengan proyek lainnya. Hal ini berguna agar perubahan yang dilakukan pada *virtual environment* proyek terkait tidak memengaruhi proyek lain. Oleh karena itu, alangkah baiknya suatu proyek Django memerlukan *virtual environment* dalam penggunaannya. 
-Aplikasi web berbasis Django tanpa *virtual environment* tetap dapat dijalankan. Namun, seluruh pengaturan dan *package* akan menyatu satu sama lain.
+- *Virtual environment* berguna untuk memisahkan antara pengaturan dan *package* yang dimiliki oleh suatu proyek Django dengan proyek lainnya. Hal ini berguna agar perubahan yang dilakukan pada *virtual environment* proyek terkait tidak memengaruhi proyek lain. Oleh karena itu, alangkah baiknya suatu proyek Django memerlukan *virtual environment* dalam penggunaannya. 
+- Aplikasi web berbasis Django tanpa *virtual environment* tetap dapat dijalankan. Namun, seluruh pengaturan dan *package* akan menyatu satu sama lain.
 
 ### 3. Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
 
-Cara pengimplementasian poin 1 hingga 4 (pembuatan fungsi **views.py**, *routing*, pemetaan html, dan *deployment*) mengikuti bagan MVT yang telah dijawab sebelumnya. 
-Sebelum membuat fungsi pada **views.py**, saya harus membuat gerbang masuk ke dalam html yang diinginkan melalui urls. Pada urls, saya menyelipkan fungsi yang terdapat di dalam views sehingga keduanya tersambung. Fungsi yang dibuat di **views.py** adalah fungsi penangkapan data dari **models.py**. Data tersebut dimasukkan ke dalam variabel context yang nantinya akan dikirim ke template html bersangkutan (disini akan diberikan ke **katalog.html**). 
-Terkait pemetaan html, perlu adanya pengubahan kode, seperti penambahan {{suatu variabel}}, di dalam **katalog.html** sehingga context yang dikirim sebelumnya dapat ditangkap. 
-Deployment dilakukan pada platform Heroku. Saya hanya perlu melakukan push ke Github, lalu menyisipkan API key dan app name dan melakukan pengaturan sehingga sambungan antara Github dan Heroku terjadi.
+- Cara pengimplementasian poin 1 hingga 4 (pembuatan fungsi **views.py**, *routing*, pemetaan html, dan *deployment*) mengikuti bagan MVT yang telah dijawab sebelumnya. 
+- Sebelum membuat fungsi pada **views.py**, saya harus membuat gerbang masuk ke dalam html yang diinginkan melalui urls. Pada urls, saya menyelipkan fungsi yang terdapat di dalam views sehingga keduanya tersambung. Fungsi yang dibuat di **views.py** adalah fungsi penangkapan data dari **models.py**. Data tersebut dimasukkan ke dalam variabel (disini akan dinamakan sebagai *context*) yang nantinya akan dikirim ke template html bersangkutan (disini akan diberikan ke **katalog.html**). 
+- Terkait pemetaan html, perlu adanya pengubahan kode, seperti penambahan {{suatu variabel}}, di dalam **katalog.html** sehingga variabel yang telah dikirim sebelumnya dapat ditangkap. 
+- Deployment dilakukan pada platform Heroku. Saya hanya perlu melakukan push ke Github, lalu menyisipkan API key dan app name, lalu melakukan pengaturan sehingga sambungan antara Github dan Heroku terjadi.
