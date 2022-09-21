@@ -7,10 +7,10 @@ from django.core import serializers
 def show_watchlist (request):
     watchlist_data = WatchlistItem.objects.all()
     context = {
-        'watchlist': watchlist_data,
         'nama': 'Ivan Rabbani Cezeliano',
         'npm' : '2106701892',
-        'message': which_message()
+        'message': which_message(),
+        'watchlist': watchlist_data
     }
     return render(request, "mywatchlist.html", context)
 
@@ -23,9 +23,9 @@ def show_json (request):
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 # If you want to see the html version for WatchlistItem
-def show_html (request):
-    watchlist_data = WatchlistItem.objects.all().values()
-    return HttpResponse(watchlist_data)
+# def show_html (request):
+#     watchlist_data = WatchlistItem.objects.all().values()
+#     return HttpResponse(watchlist_data)
 
 def which_message():
     # Simple counter
