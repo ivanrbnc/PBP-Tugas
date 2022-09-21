@@ -1,5 +1,5 @@
 # Aplikasi
-- Aplikasi dari repo ini memiliki link sebagai berikut:
+- Aplikasi ini memiliki link sebagai berikut:
 [Link PBP-Tugas2-Ivan](http://ivanrbnc-pbp-tugas2.herokuapp.com/katalog/)
 
 # Jawaban dari pertanyaan yang telah diberikan

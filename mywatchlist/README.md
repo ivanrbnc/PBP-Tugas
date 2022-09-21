@@ -1,6 +1,6 @@
 # Aplikasi
-- Aplikasi dari repo ini memiliki link sebagai berikut:
-[Link PBP-Tugas2-Ivan](http://ivanrbnc-pbp-tugas2.herokuapp.com/mywatchlist/)
+- Aplikasi ini memiliki link sebagai berikut:
+[Link PBP-Tugas3-Ivan](http://ivanrbnc-pbp-tugas2.herokuapp.com/mywatchlist/)
 
 # Jawaban dari pertanyaan yang telah diberikan
 
