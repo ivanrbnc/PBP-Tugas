@@ -27,6 +27,7 @@ def show_json (request):
 #     watchlist_data = WatchlistItem.objects.all().values()
 #     return HttpResponse(watchlist_data)
 
+# Bonus (!)
 def which_message():
     # Simple counter
     counter_true = 0
