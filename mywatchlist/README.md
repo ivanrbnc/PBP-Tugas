@@ -26,6 +26,6 @@
 
 ### *Screenshot* pengaksesan website melalui Postman
 
-![Screenshot melalui postman 1]()
-![Screenshot melalui postman 2]()
-![Screenshot melalui postman 3]()
+![Screenshot melalui postman 1 - URL HTML](/assets/mywatchlist-html.PNG)
+![Screenshot melalui postman 2 - URL XML](/assets/mywatchlist-xml.PNG)
+![Screenshot melalui postman 3 - URL JSON](/assets/mywatchlist-json.PNG)
