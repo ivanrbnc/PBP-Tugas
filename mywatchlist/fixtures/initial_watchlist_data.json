@@ -1,0 +1,112 @@
+[
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 1,
+        "fields": {
+            "watched": "True",
+            "title": "Koe no Katachi",
+            "rating": 4.8,
+            "release_date": "3 May 2017",
+            "review": "The film was great. It shows that discrimination is a bad thing to do."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 2,
+        "fields": {
+            "watched": "True",
+            "title": "Joker",
+            "rating": 4.5,
+            "release_date": "2 October 2019",
+            "review": "Overall, it was solid for a film that shows action. The cinematic was great, even though it's barely visible because of its dark theme."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 3,
+        "fields": {
+            "watched": "True",
+            "title": "Mencuri Raden Saleh",
+            "rating": 4.85,
+            "release_date": " 25 Agustus 2022 ",
+            "review": "It was really hard to find flaws from this movie. The plot, cinematic, and how the actors act was very professional."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 4,
+        "fields": {
+            "watched": "True",
+            "title": "Avengers: Endgame",
+            "rating": 4.7,
+            "release_date": "24 April 2019",
+            "review": "The most noticeable component of this movie was its effects and CGI. This film execution was spot on."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 5,
+        "fields": {
+            "watched": "True",
+            "title": "Pengabdi Setan",
+            "rating": 4.2,
+            "release_date": "28 September 2017",
+            "review": "From the early to mid, the plot was really awesome. However, starting from mid time was awful."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 6,
+        "fields": {
+            "watched": "False",
+            "title": "Extreme Job",
+            "rating": 4.25,
+            "release_date": "20 Februari 2019",
+            "review": "The comedy element was quite funny."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 7,
+        "fields": {
+            "watched": "True",
+            "title": "Despicable Me",
+            "rating": 4.05,
+            "release_date": "9 Juli 2010",
+            "review": "The movie was suited well for kids."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 8,
+        "fields": {
+            "watched": "True",
+            "title": "Kimi no Nawa",
+            "rating": 4.8,
+            "release_date": "7 December 2016",
+            "review": "For a movie that was made around 2016, it's plot was memorable."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 9,
+        "fields": {
+            "watched": "True",
+            "title": "The Maze Runner",
+            "rating": 3.95,
+            "release_date": "17 September 2014",
+            "review": "Enjoyable."
+        }
+    },
+    {
+        "model": "mywatchlist.watchlistitem",
+        "pk": 10,
+        "fields": {
+            "watched": "True",
+            "title": "Shang-Chi and the Legend of the Ten Rings",
+            "rating": 4.4,
+            "release_date": "30 September 2021",
+            "review": "The visuals and moral of the story were spot on. Subjectively, this movie probably needs to receive more rating."
+        }
+    }
+]

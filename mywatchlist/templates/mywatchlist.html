@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+ {% block content %}
+
+  <h1>Tugas 3 Assignment PBP/PBD</h1>
+
+  <h5>Name: </h5>
+  <p>{{nama}}</p>
+
+  <h5>Student ID: </h5>
+  <p>{{npm}}</p>
+
+  <script>
+    alert('{{message}}')
+  </script>
+
+  <table>
+    <tr>
+      <th>Watch Counter</th>
+      <th>Title</th>
+      <th>Rating (scale : 1 to 5)</th>
+      <th>Release Date</th>
+      <th>Review</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for film in watchlist %}
+      <tr>
+        <th>{{film.watched}}</th>
+        <th>{{film.title}}</th>
+        <th>{{film.rating}}</th>
+        <th>{{film.release_date}}</th>
+        <th>{{film.review}}</th>
+      </tr>
+    {% endfor %}
+  </table>
+
+ {% endblock content %}
