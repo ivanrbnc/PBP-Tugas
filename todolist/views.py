@@ -12,7 +12,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 # Create your views here.
-@login_required(login_url='todolist/login/')
+@login_required(login_url='login/')
 def show_todo(request):
     data_todo = Todolist_Data.objects.filter(user=request.user)
     context = {
@@ -55,7 +55,7 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
-@login_required(login_url='todolist/login/')
+@login_required(login_url='login/')
 def ask_todo_creation(request):
     if request.method == 'POST':
         title = request.POST.get('title')
