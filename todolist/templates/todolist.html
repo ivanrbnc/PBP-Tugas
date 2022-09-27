@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+  <h1>Todo list</h1>
+  <h3>Username: {{nama}}</h3>
+</div>
+
+{% if query_set_todo %}
+<table>
+  <tr>
+    <th>Creation Date</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+  
+  {% for task in query_set_todo %}
+  <tr>
+    <th>{{task.date}}</th>
+    <th>{{task.title}}</th>
+    <th>{{task.description}}</th>
+  </tr>
+  {% endfor %}
+</table>
+{% endif %}
+
+<button><a href="{% url 'todolist:ask_todo_creation' %}">Add Task</a></button>
+<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+
+{% endblock content %}
