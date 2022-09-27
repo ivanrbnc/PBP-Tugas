@@ -12,20 +12,22 @@
     <table>
       <tr>
         <td>Title:</td>
-        <td> <input type="text" name="title" placeholder="Title" class="form-control"/></td>
+        <td> <input type="text" name="title" placeholder="Title" class="form-control"></td>
       </tr>
   
       <tr>
         <td>Descrition:</td>
-        <td> <input type="text" name="description" placeholder="Description" class="form-control"/> </td>
+        <td> <input type="text" name="description" placeholder="Description" class="form-control"> </td>
       </tr>
   
       <tr>
         <td></td>
-        <td><input class="btn submit_btn" type="submit" value="Submit" /></td>
+        <td><input class="btn submit_btn" type="submit" value="Submit"></td>
       </tr>
     </table>
   </form>
 </div>
+
+<button><a href="{% url 'todolist:show_todo' %}">Back</a></button>
 
 {% endblock content %}
