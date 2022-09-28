@@ -14,10 +14,10 @@ from django.urls import reverse
 # Create your views here.
 @login_required(login_url='login/')
 def show_todo(request):
-    data_todo = Todolist_Data.objects.filter(user=request.user)
+    data_todo = Todolist_Data.objects.filter(user = request.user)
     context = {
     'query_set_todo': data_todo,
-    'nama': request.user,
+    'name': request.user,
     }
     return render(request, "todolist.html", context)
 
@@ -28,7 +28,7 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Akun telah berhasil dibuat!')
+            messages.success(request, 'Account creation is success!')
             return redirect('todolist:login')
     
     context = {'form':form}
@@ -38,14 +38,14 @@ def login_user(request):
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username = username, password = password)
         if user is not None:
             login(request, user) # melakukan login terlebih dahulu
             response = HttpResponseRedirect(reverse("todolist:show_todo")) # membuat response
             response.set_cookie('last_login', str(datetime.datetime.now())) # membuat cookie last_login dan menambahkannya ke dalam response
             return response
         else:
-            messages.info(request, 'Username atau Password salah!')
+            messages.info(request, 'Incorrect Username or Password!')
     context = {}
     return render(request, 'login.html', context)
 
@@ -62,7 +62,7 @@ def ask_todo_creation(request):
         description = request.POST.get('description')
 
         # Membuat To Do List berdasarkan input user
-        todo = Todolist_Data.objects.create(title=title, description=description,date=datetime.date.today(), user=request.user)
+        todo = Todolist_Data.objects.create(title = title, description = description,date = datetime.date.today(), user = request.user)
         
         # Kembali ke halaman To Do List
         response = HttpResponseRedirect(reverse("todolist:show_todo")) 
