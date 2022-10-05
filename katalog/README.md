@@ -6,7 +6,7 @@
 
 ### 1. Buatlah bagan yang berisi *request client* ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara **urls.py**, **views.py**, **models.py**, dan berkas **html**;
 
-![Bagan MVT](/assets/Bagan%20MVT.png)
+![Bagan MVT](/static/assets/Bagan%20MVT.png)
 
 1. Mula-mula, proses pertama yang dilakukan adalah mengarahkan permintaan *client* atau *user* ke **urls.py**. 
 2. Dari urls akan diteruskan ke **views.py** untuk pemilihan bentuk web yang ingin ditampilkan. Di dalam views, seorang pengembang sudah menyiapkan elemen-elemen yang akan disisipkan ke dalam html. 
