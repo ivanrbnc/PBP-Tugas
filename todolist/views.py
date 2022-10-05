@@ -30,6 +30,8 @@ def register(request):
             form.save()
             messages.success(request, 'Account creation is success!')
             return redirect('todolist:login')
+        else:
+            messages.info(request, 'Invalid input!')
     
     context = {'form':form}
     return render(request, 'register.html', context)
