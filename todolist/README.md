@@ -78,6 +78,6 @@
 
 ### 4. Jelaskan bagaimana cara kamu mengimplementasikan *checklist* di atas.
 
-1. Memberi bootstrap pada tiap file HTML
+1. Memberi bootstrap pada tiap file HTML sehingga halaman menjadi responsif
 2. Mencari referensi yang cocok untuk dimasukkan pada file HTML yang diinginkan
 3. Mengaplikasikan referensi-referensi tersebut sehingga *checklist* terpenuhi, mulai dari cards, dekorasi, dan lain sebagainya
