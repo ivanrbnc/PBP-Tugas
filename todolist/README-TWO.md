@@ -14,6 +14,8 @@ Sesuai pada namanya, *event-driven programming* adalah pemrograman berbasis *eve
 Penerapan *asynchronous programming* pada AJAX memperbolehkan *user* untuk melihat perubahan yang terjadi tanpa melakukan *refresh* pada browser. Hal ini dapat terjadi karena HTML yang dimiliki sudah memuat data sehingga user tidak perlu me-*refresh*. Meskipun begitu, data yang diberi user tetap dipindahkan ke server secara tidak terlihat.
 
 ### 4. Jelaskan bagaimana cara kamu mengimplementasikan *checklist* di atas.
-1. Menambahkan fungsi pada views.py dan menyambungkannya melalui urls.py
-2. Membuat modals yang isinya adalah form dari create.html
-3. Membuat fungsi AJAX POST untuk menyimpan data secara asynchronous
+1. Menambahkan fungsi pada **views.py** dan menyambungkannya melalui **urls.py**
+2. Membuat *modals* yang isinya adalah *form* dari **create.html**
+3. Membuat fungsi AJAX GET untuk menangkap data dari server, serta membuat fungsi *refresh* secara *asynchronous*
+4. Membuat fungsi AJAX POST untuk menyimpan data secara *asynchronous*
+5. Menyambungkan fungsi-fungsi AJAX yang terjadi antara **views.py** dan **todolist.html**
