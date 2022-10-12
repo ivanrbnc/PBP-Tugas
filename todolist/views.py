@@ -71,6 +71,7 @@ def ask_todo_creation(request):
 
     return render(request, "create.html")
 
+@login_required(login_url='login/')
 def add_task(request):
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -83,6 +84,5 @@ def add_task(request):
 
 @login_required(login_url='/todolist/login/')
 def show_json(request):
-    user = request.user
-    data = Todolist_Data.objects.filter(user=user)
+    data = Todolist_Data.objects.all() # No filter because it says, "seluruh data task"
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
