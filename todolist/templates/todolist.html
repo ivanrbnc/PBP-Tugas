@@ -27,7 +27,7 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create Todo</h1>
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">Create Task</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -49,9 +49,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Somehow, I need to add this button, even though it "maybe" does nothing.. -->
-          <button id = "refresh" type="button" class="btn btn-primary"> Refresh </button>
 
           <a class="navbar-brand" href="#" style="color: #fff;">
             Your todo list
@@ -273,7 +270,8 @@
         document.getElementById("todo").innerHTML = htmlString
       }
 
-      document.getElementById("refresh").onclick = refreshTodolist()
+      // Refresh Todolist
+      refreshTodolist()
 
       // When clicked "submit" on id "create_task", it'll run anonymous function below
       $(document).on('submit', '#create_task', function(e){
@@ -290,7 +288,6 @@
           },
           dataType: 'json',
         });
-        refreshTodolist();
       });
 
     </script>
