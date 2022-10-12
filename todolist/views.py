@@ -1,15 +1,14 @@
-from django.shortcuts import render
+import datetime
 from todolist.models import Todolist_Data
-
-from django.shortcuts import redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
-from django.contrib.auth import logout
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseNotFound, HttpResponseRedirect, HttpResponse, JsonResponse
 from django.urls import reverse
+from django.core import serializers
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 @login_required(login_url='login/')
@@ -71,3 +70,19 @@ def ask_todo_creation(request):
         return response
 
     return render(request, "create.html")
+
+def add_task(request):
+    if request.method == 'POST':
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        todo = Todolist_Data.objects.create(title=title, description=description,date=datetime.date.today(), is_finished=False, user=request.user)
+        todo.save()
+    
+        return HttpResponse("CREATED", status=201)
+    return HttpResponseNotFound()
+
+@login_required(login_url='/todolist/login/')
+def show_json(request):
+    user = request.user
+    data = Todolist_Data.objects.filter(user=user)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
