@@ -84,5 +84,5 @@ def add_task(request):
 
 @login_required(login_url='/todolist/login/')
 def show_json(request):
-    data = Todolist_Data.objects.all() # No filter because it says, "seluruh data task"
+    data = Todolist_Data.objects.filter(user = request.user)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
