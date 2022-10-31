@@ -76,13 +76,27 @@ def add_task(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         description = request.POST.get('description')
-        todo = Todolist_Data.objects.create(title=title, description=description,date=datetime.date.today(), is_finished=False, user=request.user)
-        todo.save()
-    
-        return HttpResponse("CREATED", status=201)
-    return HttpResponseNotFound()
+        date = request.POST.get('date')
+        todo = Todolist_Data.objects.create(title = title, description = description, date = date, user = request.user)
+        return JsonResponse(
+            {
+                'pk': todo.pk,
+                'fields': {
+                    'title': todo.title,
+                    'description': todo.description,
+                    'date': todo.date,
+                },
+            },
+            status=200,
+        )
+
+@login_required(login_url='login/')
+def delete_task(request, id):
+    todo = Todolist_Data.objects.get(user = request.user, id = id)
+    todo.delete()
+    return redirect('todolist:show_todo')
 
 @login_required(login_url='/todolist/login/')
 def show_json(request):
-    data = Todolist_Data.objects.filter(user = request.user)
+    data = Todolist_Data.objects.filter(user = request.user).order_by('date')
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")

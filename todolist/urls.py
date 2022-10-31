@@ -11,4 +11,5 @@ urlpatterns = [
     path('create-task/', ask_todo_creation, name='ask_todo_creation'),
     path('json/', show_json, name='show_json'),
     path('add/', add_task, name='add_task'),
+    path('delete/<str:id>', delete_task, name='delete_task'),
 ]
